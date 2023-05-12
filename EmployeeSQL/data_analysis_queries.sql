@@ -7,7 +7,10 @@ e.sex, s.salaries
 	INNER JOIN salaries as s ON
 	e.emp_no = s.emp_no;
 
-select e.first_name, e.last_name, e.hire_date
+select 
+e.first_name, 
+e.last_name, 
+e.hire_date
 	from employees as e
 	where date_part('year', hire_date) = 1986; 
 
@@ -35,7 +38,10 @@ d.dept_name
 	left join departments as d on
 	de.dept_no = d.dept_no;
 
-select e.first_name, e.last_name, e.sex
+select 
+e.first_name, 
+e.last_name, 
+e.sex
 	from employees as e
 	where first_name = 'Hercules' and last_name like 'B%';
 
